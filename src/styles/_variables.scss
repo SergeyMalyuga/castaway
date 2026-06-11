@@ -1,0 +1,15 @@
+@use 'sass:color';
+
+// ===== COLOR ===== //
+$white: rgb(255, 255, 255);
+$gray: rgb(25, 25, 25);
+$blue-green: rgb(17, 141, 168);
+
+/* background */
+$background-main: $gray;
+
+/* text */
+$text-main-color: color.scale($white, $alpha: 70%);
+
+// ===== TYPOGRAPHY ===== //
+$font-family-primary: 'DM Sans', sans-serif;
