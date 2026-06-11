@@ -1,5 +1,5 @@
-import type {Header} from "../../components/header/Header.ts";
+import type { Header } from "../../components/header/Header.ts";
 
 export interface MainProps {
-    header: Header;
+  header: Header;
 }

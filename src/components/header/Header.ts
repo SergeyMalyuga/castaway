@@ -1,8 +1,8 @@
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
 
 export class Header {
-    public render() {
-        return `
+  public render() {
+    return `
         <footer class="${styles.footer}" id="footer">
         <div class="${styles.content} container">
         <a href="/"><img class="${styles.image}" src="/images/vector/logo-mini.svg" 
@@ -24,6 +24,6 @@ export class Header {
 <span class="${styles.middleLine}"></span>
 </button>
 </div>
-</footer>`
-    }
+</footer>`;
+  }
 }

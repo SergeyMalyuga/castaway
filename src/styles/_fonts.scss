@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'DM Sans';
-  src: url("/fonts/dm-sans-regular.woff2") format('woff2'),
-  url("/fonts/dm-sans-regular.woff") format('woff');
+  font-family: "DM Sans";
+  src:
+    url("/fonts/dm-sans-regular.woff2") format("woff2"),
+    url("/fonts/dm-sans-regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
