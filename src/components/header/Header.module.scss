@@ -1,6 +1,6 @@
 @use "../../styles/variables" as variables;
 
-.footer {
+.header {
   padding: 43px 0;
 }
 
@@ -15,13 +15,33 @@
 }
 
 .nav {
+  transition: transform 0.3s ease;
+
   &Links {
     display: flex;
     gap: 40px;
+
+    @media (width <= 768px) {
+      flex-direction: column;
+    }
   }
 
   @media (width <= 768px) {
-    display: none;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(58 62 118 / 0.5);
+    backdrop-filter: blur(5px);
+    transform: translateX(150%);
+  }
+
+  &Open {
+    transform: translateX(0)
   }
 }
 
@@ -39,17 +59,26 @@
   &:active {
     color: variables.$link-active-color;
   }
+
+  @media (width <= 768px) {
+    font-size: 24px;
+  }
 }
 
 .burger {
   &Button {
+    position: relative;
     display: none;
     background-color: transparent;
     border: none;
-    width: 24px;
-    height: 24px;
+    width: 29px;
+    height: 29px;
     padding: 0;
+    padding: 5px;
+    border-radius: 5px;
     cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
 
     &::before,
     &::after {
@@ -58,6 +87,36 @@
       width: 100%;
       height: 2px;
       background-color: variables.$burger-bg-main;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background-color: variables.$burger-bg-hover;
+    }
+
+    &:active {
+      background-color: variables.$burger-bg-active;
+    }
+
+    &Open {
+      span {
+        opacity: 0;
+        transition: opacity 0s ease;
+      }
+
+      &::before, &::after {
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+
+      &::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
     }
 
     @media (width <= 768px) {
@@ -74,5 +133,6 @@
     width: 100%;
     height: 2px;
     background-color: variables.$burger-bg-main;
+    transition: opacity 0.3s ease;
   }
 }
