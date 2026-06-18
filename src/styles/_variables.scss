@@ -13,6 +13,9 @@ $background-main: $gray;
 /* text */
 $text-main-color: color.scale($white, $alpha: 70%);
 
+/* title */
+$title-color: $white;
+
 /* link */
 $link-main-color: $white;
 $link-hover-color: color.scale($blue-green, $blackness: 15%);
