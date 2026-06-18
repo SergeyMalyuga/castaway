@@ -3,7 +3,9 @@
 // ===== COLOR ===== //
 $white: rgb(255, 255, 255);
 $gray: rgb(25, 25, 25);
+$gray-light: rgb(128, 128, 128);
 $blue-green: rgb(17, 141, 168);
+
 
 /* background */
 $background-main: $gray;
@@ -18,6 +20,8 @@ $link-active-color: color.scale($blue-green, $blackness: 30%);
 
 /* burger */
 $burger-bg-main: $white;
+$burger-bg-hover: $gray-light;
+$burger-bg-active: color.scale($gray-light, $blackness: 25%);
 
 // ===== TYPOGRAPHY ===== //
 $font-family-primary: "DM Sans", sans-serif;
