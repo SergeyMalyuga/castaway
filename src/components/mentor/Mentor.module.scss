@@ -1,0 +1,105 @@
+@use '../../styles/variables' as variables;
+
+.mentor {
+  padding: 100px 0;
+
+  @media (width <= 992px) {
+    padding: 50px 0;
+  }
+
+  @media (width <= 768px) {
+    padding: 40px 0;
+  }
+}
+
+.content {
+  display: flex;
+  gap: 60px;
+
+  @media (width <= 992px) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  max-width: 590px;
+  width: 100%;
+
+  @media (width <= 992px) {
+    order: 2
+  }
+}
+
+.contact {
+  &Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    background-color: variables.$link-bg-accent;
+    order: 1;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 71px;
+      height: 38px;
+      background-color: white;
+      mask-image: url("/images/vector/arrow.svg");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      transition: background-color 0.3s ease;
+    }
+
+    &:hover {
+      &::before {
+        background-color: #5c2b2b;
+      }
+    }
+  }
+}
+
+.title {
+  margin-bottom: 28px;
+  order: 3;
+}
+
+.text:not(:last-of-type) {
+  margin-bottom: 33px;
+}
+
+.text:last-of-type {
+  margin-bottom: 0;
+}
+
+.text {
+  order: 4;
+}
+
+.image {
+  &Wrapper {
+    max-width: 650px;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (width <= 992px) {
+      order: 1;
+      align-self: center;
+    }
+  }
+}
+
+.caption {
+  order: 2;
+}
