@@ -2,6 +2,7 @@
 
 // ===== COLOR ===== //
 $white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 $gray: rgb(25, 25, 25);
 $gray-light: rgb(128, 128, 128);
 $blue-green: rgb(17, 141, 168);
@@ -11,7 +12,8 @@ $blue-green: rgb(17, 141, 168);
 $background-main: $gray;
 
 /* text */
-$text-main-color: color.scale($white, $alpha: 70%);
+$text-main-color: color.scale($white, $alpha: -30%);
+$text-accent-blue: $blue-green;
 
 /* title */
 $title-color: $white;
@@ -25,6 +27,17 @@ $link-active-color: color.scale($blue-green, $blackness: 30%);
 $burger-bg-main: $white;
 $burger-bg-hover: $gray-light;
 $burger-bg-active: color.scale($gray-light, $blackness: 25%);
+
+/* button */
+$button-bg-main: $blue-green;
+$button-bg-hover: color.scale($blue-green, $blackness: 15%);
+$button-bg-active: color.scale($blue-green, $blackness: 30%);
+
+/* episodes card */
+$episodes-card-bg: $black;
+$episodes-card-link-bg: $gray;
+$episodes-card-link-bg-hover: color.scale($gray, $lightness: 15%);
+$episodes-card-link-bg-active: color.scale($gray, $lightness: 30%);
 
 // ===== TYPOGRAPHY ===== //
 $font-family-primary: "DM Sans", sans-serif;
