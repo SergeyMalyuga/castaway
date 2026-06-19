@@ -29,6 +29,7 @@ $burger-bg-hover: $gray-light;
 $burger-bg-active: color.scale($gray-light, $blackness: 25%);
 
 /* button */
+$button-text-color: $white;
 $button-bg-main: $blue-green;
 $button-bg-hover: color.scale($blue-green, $blackness: 15%);
 $button-bg-active: color.scale($blue-green, $blackness: 30%);
