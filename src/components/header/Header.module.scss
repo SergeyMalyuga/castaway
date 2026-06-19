@@ -41,7 +41,8 @@
   }
 
   &Open {
-    transform: translateX(0)
+    transform: translateX(0);
+    z-index: 5;
   }
 }
 
