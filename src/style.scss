@@ -60,6 +60,24 @@ body {
     letter-spacing: 2.56px;
     line-height: 58px;
   }
+
+  @media (width <= 576px) {
+    font-size: 32px;
+    letter-spacing: 2.56px;
+    line-height: 48px;
+  }
+}
+
+.text {
+  color: variables.$text-main-color;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 18px;
+
+  @media (width <= 576px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .button {
@@ -85,6 +103,14 @@ body {
   &:active {
     background-color: variables.$button-bg-active;
   }
+}
+
+.caption {
+  display: block;
+  color: variables.$text-accent-blue;
+  font-size: 17px;
+  line-height: 27px;
+  margin-bottom: 18px;
 }
 
 .visually-hidden {
