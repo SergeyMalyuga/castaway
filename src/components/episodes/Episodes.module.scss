@@ -103,13 +103,6 @@
   }
 }
 
-.text {
-  color: variables.$text-main-color;
-  font-size: 22px;
-  line-height: 33px;
-  margin-bottom: 18px;
-}
-
 .title {
   @media (width <= 768px) {
     margin-bottom: 30px;

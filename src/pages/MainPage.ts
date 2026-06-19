@@ -4,18 +4,21 @@ import type {DataHook} from "../types/DataHook.type.ts";
 import {Hooks} from "../core/constants/consts.ts";
 import type {Hero} from "../components/hero/Hero.ts";
 import type {Episodes} from "../components/episodes/Episodes.ts";
+import type {Mentor} from "../components/mentor/Mentor.ts";
 
 export class MainPage {
     private container: HTMLElement;
     private header: Header;
     private hero: Hero;
     private episodes: Episodes;
+    private mentor: Mentor;
 
     public constructor(container: HTMLElement, props: MainProps) {
         this.container = container;
         this.header = props.header;
         this.hero = props.hero;
         this.episodes = props.episodes;
+        this.mentor = props.mentor;
     }
 
     public render() {
@@ -24,6 +27,7 @@ export class MainPage {
         <main>
 ${this.hero.render()}
                 <div data-hook="episodes"></div>
+                ${this.mentor.render()}
 </main>
         `;
         this.mount(this.header.render(), Hooks.HEADER);
