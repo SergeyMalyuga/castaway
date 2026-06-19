@@ -3,7 +3,7 @@ import styles from './Hero.module.scss';
 export class Hero {
     public render() {
         return `
-        <section id="hero">
+        <section class="${styles.hero}" id="hero">
         <div class="${styles.content} container">
         <div class="${styles.imageWrapper}">
         <img class="${styles.imageMain}" src="/images/raster/hero-human.png" alt="Человек слушает музыку" width="650" height="873" loading="eager"/>
