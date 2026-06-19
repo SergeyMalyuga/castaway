@@ -1,0 +1,124 @@
+@use '../../styles/variables' as variables;
+
+.top {
+  &Bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media (width <= 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.episodes {
+  padding-bottom: 160px;
+
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &Card {
+    display: flex;
+    gap: 53px;
+    padding: 40px;
+    background-color: variables.$episodes-card-bg;
+    border-radius: 32px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (width <= 992px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (width <= 992px) {
+    padding-bottom: 90px;
+  }
+
+  @media (width <= 768px) {
+    padding-bottom: 40px;
+  }
+}
+
+.card {
+  &Content {
+    width: 100%;
+  }
+
+  &Image {
+    &Wrapper {
+      max-width: 385px;
+      width: 100%;
+
+      @media (width <= 992px) {
+        align-self: center;
+      }
+    }
+  }
+
+  &Caption {
+    display: block;
+    color: variables.$text-accent-blue;
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 18px;
+  }
+
+  &Link {
+    display: block;
+    width: max-content;
+    padding: 0 16px;
+    border-radius: 6px;
+    color: variables.$link-main-color;
+    background-color: variables.$episodes-card-link-bg;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 48px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: variables.$episodes-card-link-bg-hover;
+    }
+
+    &:active {
+      background-color: variables.$episodes-card-link-bg-active;
+    }
+  }
+
+  &title {
+    margin-bottom: 28px;
+  }
+}
+
+.text {
+  color: variables.$text-main-color;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 18px;
+}
+
+.title {
+  @media (width <= 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+
+.button {
+  @media (width <= 768px) {
+    align-self: flex-start;
+  }
+}
