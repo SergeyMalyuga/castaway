@@ -1,0 +1,83 @@
+@use '../../styles/variables' as variables;
+
+.subscribe {
+  padding: 100px 0;
+
+  &Form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (width <= 992px) {
+    padding: 50px 0;
+  }
+
+  @media (width <= 768px) {
+    padding: 40px 0;
+  }
+}
+
+.content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 76px;
+  background-color: variables.$background-accent;
+  padding: 60px;
+  border-radius: 32px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -28px;
+    left: -36px;
+    width: 147px;
+    height: 91px;
+    background-image: url("/images/raster/subscribe-line.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (width <= 1394px) {
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (width <= 992px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (width <= 768px) {
+    padding: 15px;
+    gap: 38px;
+  }
+}
+
+.input {
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: variables.$background-main;
+  border: none;
+  padding: 26px 19px;
+  width: 100%;
+  color: variables.$text-main-color;
+  font-size: 24px;
+  line-height: 28.8px;
+
+  @media (width <= 768px) {
+    padding: 22px 15px;
+    font-size: 20px;
+    line-height: 24.4px;
+  }
+}
+
+.submit {
+  &Button {
+    align-self: flex-start;
+  }
+}
