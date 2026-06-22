@@ -5,6 +5,7 @@ import {Hero} from "./components/hero/Hero.ts";
 import {Episodes} from "./components/episodes/Episodes.ts";
 import {Mentor} from "./components/mentor/Mentor.ts";
 import {Subscribe} from "./components/subscribe/Subscribe.ts";
+import {Reviews} from "./components/reviews/Reviews.ts";
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("app") as HTMLElement;
@@ -13,9 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const episodes = new Episodes();
   const mentor = new Mentor();
   const subscribe = new Subscribe();
+  const reviews = new Reviews();
 
   if (container) {
-    const mainPage = new MainPage(container, { header, hero, episodes, mentor, subscribe });
+    const mainPage = new MainPage(container, { header, hero, episodes, mentor, subscribe, reviews });
     mainPage.render();
   }
 });
