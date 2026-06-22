@@ -7,6 +7,7 @@ import type {Episodes} from "../components/episodes/Episodes.ts";
 import type {Mentor} from "../components/mentor/Mentor.ts";
 import {Subscribe} from "../components/subscribe/Subscribe.ts";
 import type {Reviews} from "../components/reviews/Reviews.ts";
+import type {Gallery} from "../components/gallery/Gallery.ts";
 
 export class MainPage {
     private container: HTMLElement;
@@ -16,6 +17,7 @@ export class MainPage {
     private mentor: Mentor;
     private subscribe: Subscribe;
     private reviews: Reviews;
+    private gallery: Gallery;
 
     public constructor(container: HTMLElement, props: MainProps) {
         this.container = container;
@@ -25,6 +27,7 @@ export class MainPage {
         this.mentor = props.mentor;
         this.subscribe = props.subscribe;
         this.reviews = props.reviews;
+        this.gallery = props.gallery;
     }
 
     public render() {
@@ -36,6 +39,7 @@ ${this.hero.render()}
                 ${this.mentor.render()}
                 <div data-hook="subscribe"></div>
                 ${this.reviews.render()}
+                ${this.gallery.render()}
 </main>
         `;
         this.mount(this.header.render(), Hooks.HEADER);
