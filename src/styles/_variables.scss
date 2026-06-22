@@ -42,5 +42,8 @@ $episodes-card-link-bg: $gray;
 $episodes-card-link-bg-hover: color.scale($gray, $lightness: 15%);
 $episodes-card-link-bg-active: color.scale($gray, $lightness: 30%);
 
+/* quote */
+$quote-text-color: $white;
+
 // ===== TYPOGRAPHY ===== //
 $font-family-primary: "DM Sans", sans-serif;
