@@ -6,6 +6,7 @@ import type {Hero} from "../components/hero/Hero.ts";
 import type {Episodes} from "../components/episodes/Episodes.ts";
 import type {Mentor} from "../components/mentor/Mentor.ts";
 import {Subscribe} from "../components/subscribe/Subscribe.ts";
+import type {Reviews} from "../components/reviews/Reviews.ts";
 
 export class MainPage {
     private container: HTMLElement;
@@ -14,6 +15,7 @@ export class MainPage {
     private episodes: Episodes;
     private mentor: Mentor;
     private subscribe: Subscribe;
+    private reviews: Reviews;
 
     public constructor(container: HTMLElement, props: MainProps) {
         this.container = container;
@@ -22,6 +24,7 @@ export class MainPage {
         this.episodes = props.episodes;
         this.mentor = props.mentor;
         this.subscribe = props.subscribe;
+        this.reviews = props.reviews;
     }
 
     public render() {
@@ -32,6 +35,7 @@ ${this.hero.render()}
                 <div data-hook="episodes"></div>
                 ${this.mentor.render()}
                 <div data-hook="subscribe"></div>
+                ${this.reviews.render()}
 </main>
         `;
         this.mount(this.header.render(), Hooks.HEADER);
