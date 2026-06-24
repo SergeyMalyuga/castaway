@@ -1,6 +1,9 @@
 import styles from './Hero.module.scss';
+import {RadiosList} from "../radiosList/RadiosList.ts";
 
 export class Hero {
+    private radiosList = new RadiosList();
+
     public render() {
         return `
         <section class="${styles.hero}" id="hero">
@@ -14,13 +17,7 @@ export class Hero {
 <span class="${styles.textUnderline}">next</span> 
 <span class="${styles.textBold}">level</span></h1>
 <span class="${styles.radiosCaption}">Listen on</span>
-<ul class="${styles.radiosList}" aria-label="Радиостанции">
-<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/vector/hero-radio-1.svg" alt="Fm 103" width="32" height="32" loading="lazy"/></a></li>
-<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/vector/hero-radio-2.svg" alt="Fm 112" width="32" height="32" loading="lazy"/></a></li>
-<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/vector/hero-radio-3.svg" alt="Fm 203" width="32" height="32" loading="lazy"/></a></li>
-<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/vector/hero-radio-4.svg" alt="Fm 40" width="32" height="32" loading="lazy"/></a></li>
-<li><a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/vector/hero-radio-5.svg" alt="Fm 13" width="32" height="32" loading="lazy"/></a></li>
-</ul>
+${this.radiosList.render()}
 </div>
 </div>
 </section>`
