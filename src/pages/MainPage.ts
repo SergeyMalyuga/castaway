@@ -8,6 +8,7 @@ import type {Mentor} from "../components/mentor/Mentor.ts";
 import {Subscribe} from "../components/subscribe/Subscribe.ts";
 import type {Reviews} from "../components/reviews/Reviews.ts";
 import type {Gallery} from "../components/gallery/Gallery.ts";
+import type {Footer} from "../components/footer/Footer.ts";
 
 export class MainPage {
     private container: HTMLElement;
@@ -18,6 +19,7 @@ export class MainPage {
     private subscribe: Subscribe;
     private reviews: Reviews;
     private gallery: Gallery;
+    private footer: Footer;
 
     public constructor(container: HTMLElement, props: MainProps) {
         this.container = container;
@@ -28,6 +30,7 @@ export class MainPage {
         this.subscribe = props.subscribe;
         this.reviews = props.reviews;
         this.gallery = props.gallery;
+        this.footer = props.footer;
     }
 
     public render() {
@@ -41,6 +44,7 @@ ${this.hero.render()}
                 ${this.reviews.render()}
                 ${this.gallery.render()}
 </main>
+${this.footer.render()}
         `;
         this.mount(this.header.render(), Hooks.HEADER);
         this.header.init();
