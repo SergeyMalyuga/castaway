@@ -8,6 +8,7 @@ import {Subscribe} from "./components/subscribe/Subscribe.ts";
 import {Reviews} from "./components/reviews/Reviews.ts";
 import {Gallery} from "./components/gallery/Gallery.ts";
 import {SwiperGallery} from "./components/swiper/Swiper.ts";
+import {Footer} from "./components/footer/Footer.ts";
 
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("app") as HTMLElement;
@@ -19,10 +20,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const reviews = new Reviews();
     const gallery = new Gallery();
     const swiper = new SwiperGallery();
+    const footer = new Footer();
 
     if (container) {
-        const mainPage = new MainPage(container, {header, hero, episodes, mentor, subscribe, reviews, gallery});
+        const mainPage = new MainPage(container, {header, hero, episodes, mentor, subscribe, reviews, gallery, footer});
         mainPage.render();
         swiper.init();
+
+        window.addEventListener('beforeunload', () => {
+            mainPage.destroy();
+            swiper.destroy();
+        })
     }
 });
