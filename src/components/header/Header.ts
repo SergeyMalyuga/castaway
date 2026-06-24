@@ -18,10 +18,10 @@ export class Header {
         
         <nav class="${styles.nav}" id="nav-menu" aria-label="Основная навигация">
         <ul class="${styles.navLinks}">
-<li><a class="${styles.link}" href="#">Home</a></li>
-<li><a class="${styles.link}" href="#">Episodes</a></li>
-<li><a class="${styles.link}" href="#">About</a></li>
-<li><a class="${styles.link}" href="#">Contact</a></li>
+<li><a class="link" href="#">Home</a></li>
+<li><a class="link" href="#">Episodes</a></li>
+<li><a class="link" href="#">About</a></li>
+<li><a class="link" href="#">Contact</a></li>
 </ul>
 </nav>
 
