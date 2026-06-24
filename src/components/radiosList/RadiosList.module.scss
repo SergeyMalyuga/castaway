@@ -1,0 +1,32 @@
+.radios {
+  &List {
+    display: flex;
+    gap: 18px;
+    align-self: flex-start;
+
+    img {
+      display: block;
+    }
+  }
+
+  &Caption {
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 16px;
+  }
+}
+
+.item {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(0.94);
+  }
+
+  &:active{
+    transform: scale(0.92);
+  }
+}
