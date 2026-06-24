@@ -135,6 +135,26 @@ body {
   }
 }
 
+.link {
+  text-decoration: none;
+  color: variables.$link-main-color;
+  font-size: 17px;
+  line-height: 27px;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: variables.$link-hover-color;
+  }
+
+  &:active {
+    color: variables.$link-active-color;
+  }
+
+  @media (width <= 768px) {
+    font-size: 24px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
